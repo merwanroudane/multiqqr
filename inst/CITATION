@@ -1,0 +1,47 @@
+citHeader("To cite mqqr in publications, please use:")
+
+bibentry(
+  bibtype  = "Manual",
+  title    = "mqqr: Multivariate Quantile-on-Quantile Regression",
+  author   = person("Merwan", "Roudane",
+                    email = "merwanroudane920@gmail.com"),
+  year     = "2026",
+  note     = "R package version 1.0.0",
+  url      = "https://github.com/merwanroudane/multiqqr",
+  textVersion = paste(
+    "Roudane, M. (2026).",
+    "mqqr: Multivariate Quantile-on-Quantile Regression.",
+    "R package version 1.0.0.",
+    "https://github.com/merwanroudane/multiqqr"
+  )
+)
+
+bibentry(
+  bibtype  = "Article",
+  title    = paste("Green financing of renewable energy generation:",
+                   "Capturing the role of exogenous moderation for",
+                   "ensuring sustainable development"),
+  author   = c(person("Avik",        "Sinha"),
+               person("Vinit",       "Ghosh"),
+               person("Nazim",       "Hussain"),
+               person("Duc Khuong",  "Nguyen"),
+               person("Narasingha",  "Das")),
+  journal  = "Energy Economics",
+  year     = "2023",
+  volume   = "126",
+  pages    = "107021",
+  doi      = "10.1016/j.eneco.2023.107021"
+)
+
+bibentry(
+  bibtype  = "Article",
+  title    = paste("Oil Prices, US Stock Return, and the Dependence",
+                   "Between Their Quantiles"),
+  author   = c(person("Nicholas", "Sim"),
+               person("Hongtao",  "Zhou")),
+  journal  = "Journal of Banking and Finance",
+  year     = "2015",
+  volume   = "55",
+  pages    = "1--12",
+  doi      = "10.1016/j.jbankfin.2015.01.013"
+)
