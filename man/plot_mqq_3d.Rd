@@ -39,12 +39,17 @@ plot_mqq_interaction(mqq_result, moderator,
 \description{3D surface, heatmap, contour and moderator-interaction plots
 for results of \code{\link{mqq_regression}}, defaulting to MATLAB Parula.}
 \examples{
-\donttest{
-set.seed(1); n <- 200; x <- rnorm(n); z <- rnorm(n)
-y <- 0.4*x + 0.2*z + rnorm(n, sd = 0.4)
-fit <- mqq_regression(y, x, list(Z = z), n_boot = 30, verbose = FALSE)
-plot_mqq_3d(fit, colorscale = "Parula")
-plot_mqq_heatmap(fit, value = "beta1", show_stars = TRUE)
-plot_mqq_interaction(fit, "Z", value = "gamma", kind = "heatmap")
-}
+## Small toy example -- auto-tested. Plot objects are constructed but
+## not rendered when run non-interactively.
+set.seed(1); n <- 60
+x <- rnorm(n); z <- rnorm(n)
+y <- 0.4 * x + 0.2 * z + rnorm(n, sd = 0.4)
+fit <- mqq_regression(y, x, list(Z = z),
+                      y_quantiles = c(0.25, 0.5, 0.75),
+                      x_quantiles = c(0.25, 0.5, 0.75),
+                      n_boot = 5, verbose = FALSE)
+p1 <- plot_mqq_3d(fit, colorscale = "Parula")
+p2 <- plot_mqq_heatmap(fit, value = "beta1", show_stars = TRUE)
+p3 <- plot_mqq_contour(fit, value = "beta1")
+p4 <- plot_mqq_interaction(fit, "Z", value = "gamma", kind = "heatmap")
 }

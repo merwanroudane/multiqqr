@@ -30,6 +30,10 @@ mqqr_colorscales(show_preview = TRUE)
 colour scale across all mqqr 3D and heatmap functions is MATLAB Parula
 (R2014b default), reproduced exactly from MathWorks' RGB stops.}
 \examples{
-parula_colors(10)
-mqqr_colorscales()
+parula_colors(8)
+matlab_jet_colors(8)
+turbo_colors(8)
+bluered_colors(8)
+sinha_colors(8)
+mqqr_colorscales(show_preview = FALSE)
 }

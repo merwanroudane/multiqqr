@@ -22,6 +22,13 @@ weighted_qr(y, X, tau, weights = NULL)
 weights on the empirical-CDF scale, and weighted quantile regression via
 \code{quantreg::rq.wfit}.}
 \examples{
+set.seed(1)
 x <- rnorm(100)
-w <- qq_weights(x, 0.3)
+w <- qq_weights(x, tau = 0.3)
+sum(w)            # weights sum to length(x)
+k <- gaussian_kernel(seq(-3, 3, by = 1))
+X <- cbind(1, x)
+y <- 0.5 * x + rnorm(100, sd = 0.3)
+fit <- weighted_qr(y, X, tau = 0.5, weights = w)
+fit$coef
 }
